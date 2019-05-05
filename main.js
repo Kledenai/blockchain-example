@@ -59,5 +59,6 @@ exampleCoin.addBlock(new Block(2, "12/07/2017", { amount: 10 }));
 console.log('Essa blockchain é valida?' + exampleCoin.isChainValid());
 
 exampleCoin.chain[1].data = {amount: 100};
+exampleCoin.chain[1].hash = exampleCoin.chain[1].calculateHash();
 
 console.log('Essa blockchain é valida?' + exampleCoin.isChainValid());
