@@ -70,4 +70,3 @@ exampleCoin.addBlock(new Block(1, "10/07/2017", { amount: 4 }));
 
 console.log("mineirando bloco 2...");
 exampleCoin.addBlock(new Block(2, "12/07/2017", { amount: 10 }));
-
