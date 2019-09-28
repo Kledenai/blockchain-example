@@ -1,20 +1,37 @@
 {
   "name": "blockchain-example",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Exemplo simple de blockchain usando javascript",
+  "main": "src/blockchain.js",
   "dependencies": {
-    "crypto-js": "^3.1.9-1"
+    "crypto-js": "^3.1.9-1",
+    "elliptic": "^6.5.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "coveralls": "^3.0.6",
+    "eslint": "^6.4.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1"
+  },
   "scripts": {
-    "start": "node src/index.js"
+    "test": "mocha tests/*.js",
+    "lint": "eslint src/** tests/**",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kledenai/blockchain-example.git"
   },
-  "keywords": [],
+  "keywords": [
+    "blockchain",
+    "transactions",
+    "education"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
